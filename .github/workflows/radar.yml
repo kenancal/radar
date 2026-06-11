@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Kodu al
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Python kur
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
@@ -27,8 +27,8 @@ jobs:
       - name: Radar'i calistir (bulten + arsiv + index)
         run: python radar.py
         env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL:   ${{ secrets.OPENAI_MODEL }}
           SMTP_HOST:      ${{ secrets.SMTP_HOST }}
           SMTP_PORT:      ${{ secrets.SMTP_PORT }}
           SMTP_USER:      ${{ secrets.SMTP_USER }}
