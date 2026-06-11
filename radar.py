@@ -223,13 +223,14 @@ def _llm_client_and_model():
     except Exception as e:
         print(f"[uyari] openai paketi yuklenemedi: {e}")
         return None, None, None
-    gem = os.environ.get("GEMINI_API_KEY")
+    gem = (os.environ.get("GEMINI_API_KEY") or "").strip()
     if gem:
-        model = os.environ.get("LLM_MODEL", "gemini-2.5-flash")
+        model = (os.environ.get("LLM_MODEL") or "").strip() or "gemini-2.5-flash"
         return OpenAI(api_key=gem, base_url=GEMINI_BASE), model, "gemini"
-    oa = os.environ.get("OPENAI_API_KEY")
+    oa = (os.environ.get("OPENAI_API_KEY") or "").strip()
     if oa:
-        model = os.environ.get("LLM_MODEL", os.environ.get("OPENAI_MODEL", "gpt-4o-mini"))
+        model = ((os.environ.get("LLM_MODEL") or "").strip()
+                 or (os.environ.get("OPENAI_MODEL") or "").strip() or "gpt-4o-mini")
         return OpenAI(api_key=oa), model, "openai"
     return None, None, None
 
