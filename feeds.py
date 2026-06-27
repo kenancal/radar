@@ -4,7 +4,6 @@
 
 FEEDS = [
     # --- TURKIYE: girisim & yatirim ---
-    ("Webrazzi",                       "https://webrazzi.com/feed"),
     ("Google Haber TR — Girişim/Yatırım",
      "https://news.google.com/rss/search?q=startup%20yat%C4%B1r%C4%B1m%20giri%C5%9Fim%20when%3A2d&hl=tr&gl=TR&ceid=TR:tr"),
     ("Google Haber TR — Yatırım Turu",
