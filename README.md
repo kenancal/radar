@@ -88,3 +88,21 @@ python radar.py           # archive/ ve index.html'i lokalde de üretir
 ## Maliyet
 Actions: günde ~1-2 dk (private repo aylık 2000 dk ücretsiz kotada). LLM
 (gpt-4o-mini): günde birkaç sent. GitHub Pages: ücretsiz.
+
+---
+
+## Katkıda bulunma
+
+RADAR açık kaynaklı bir projedir. Hata düzeltmeleri, yeni RSS kaynakları, testler, dokümantasyon iyileştirmeleri, bölgesel değerlendirme profilleri ve altyapı geliştirmeleri memnuniyetle karşılanır.
+
+Katkı yapmadan önce [CONTRIBUTING.md](CONTRIBUTING.md) dosyasını inceleyin.
+
+Büyük özellikler veya mimari değişiklikler için önce bir GitHub issue açılması önerilir.
+
+## Güvenlik
+
+API anahtarlarını, SMTP şifrelerini, erişim tokenlarını veya kişisel bilgileri repoya commit etmeyin. Hassas bilgiler GitHub Actions Secrets veya yerel `.env` dosyası üzerinden yönetilmelidir.
+
+## Lisans
+
+Bu proje [MIT License](LICENSE) altında yayımlanmaktadır.
